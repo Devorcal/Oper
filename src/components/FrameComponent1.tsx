@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { Button } from "@mui/material";
 import styles from "./FrameComponent1.module.css";
 
 export type FrameComponent1Type = {
@@ -9,30 +10,65 @@ const FrameComponent1: FunctionComponent<FrameComponent1Type> = ({
   className = "",
 }) => {
   return (
-    <div className={[styles.frameParent, className].join(" ")}>
-      <button className={styles.navigationBoxParent}>
-        <div className={styles.navigationBox} />
-        <a className={styles.home}>Home</a>
-      </button>
-      <div className={styles.dashboardWrapper}>
-        <a className={styles.dashboard}>Dashboard</a>
+    <section className={[styles.homePageInner, className].join(" ")}>
+      <div className={styles.containerParent}>
+        <div className={styles.container}>
+          <div className={styles.column}>
+            <div className={styles.content}>
+              <h1 className={styles.h1TitleCopyGoes}>
+                Discover a World of Education Excellence
+              </h1>
+              <div className={styles.pLoremIpsumDolor}>
+                Welcome to Beteseb Academy Portal, where learning meets
+                innovation. Explore our comprehensive platform designed to
+                enhance your educational journey and streamline administrative
+                tasks.
+              </div>
+            </div>
+            <div className={styles.actions}>
+              <Button
+                className={styles.button}
+                disableElevation={true}
+                variant="contained"
+                sx={{
+                  textTransform: "none",
+                  color: "#fff",
+                  fontSize: "12",
+                  background: "#4555ff",
+                  borderRadius: "15px",
+                  "&:hover": { background: "#4555ff" },
+                }}
+              >
+                Learn More
+              </Button>
+            </div>
+          </div>
+          <div className={styles.column1}>
+            <img
+              className={styles.imageWrapperIcon}
+              loading="lazy"
+              alt=""
+              src="/image-wrapper@2x.png"
+            />
+          </div>
+        </div>
+        <div className={styles.frameWrapper}>
+          <div className={styles.frameParent}>
+            <div className={styles.featuresParent}>
+              <b className={styles.features}>Features</b>
+              <h1
+                className={styles.discoverTheKey}
+              >{`Discover the Key Features `}</h1>
+            </div>
+            <p className={styles.theMultiFunctionalPlatform}>
+              {" "}
+              The multi-functional platform designed to enhance your educational
+              experience to make the most of your academic journey.
+            </p>
+          </div>
+        </div>
       </div>
-      <div className={styles.resourcesWrapper}>
-        <b className={styles.resources}>Resources</b>
-      </div>
-      <div className={styles.calendarWrapper}>
-        <a className={styles.calendar}>Calendar</a>
-      </div>
-      <div className={styles.reportsWrapper}>
-        <b className={styles.reports}>Reports</b>
-      </div>
-      <div className={styles.studyWrapper}>
-        <b className={styles.study}>Study</b>
-      </div>
-      <div className={styles.settingWrapper}>
-        <b className={styles.setting}>Setting</b>
-      </div>
-    </div>
+    </section>
   );
 };
 

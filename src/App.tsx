@@ -6,10 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import AdminLogin from "./pages/AdminLogin";
-import StudentLogin from "./pages/StudentLogin";
-import Calander from "./pages/Calander";
-import Dashboard from "./pages/Dashboard";
+import Request1 from "./pages/Request1";
 
 function App() {
   const action = useNavigationType();
@@ -31,19 +28,7 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/admin-login":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/student-login":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/calander":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/dashboard":
+      case "/request":
         title = "";
         metaDescription = "";
         break;
@@ -66,10 +51,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/admin-login" element={<AdminLogin />} />
-      <Route path="/student-login" element={<StudentLogin />} />
-      <Route path="/calander" element={<Calander />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/request" element={<Request1 />} />
     </Routes>
   );
 }

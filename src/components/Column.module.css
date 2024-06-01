@@ -1,0 +1,77 @@
+.identificationId,
+.toRequestAn {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+}
+.identificationId {
+  height: 76px;
+  font-size: inherit;
+  line-height: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.toRequestAn {
+  font-size: var(--font-size-xl);
+  line-height: 25px;
+  color: var(--gray-500);
+}
+.content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.button {
+  height: 41px;
+  flex: 1;
+}
+.actions,
+.column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.actions {
+  width: 128px;
+  flex-direction: row;
+  padding: var(--padding-base) 0 0;
+}
+.column {
+  flex: 1;
+  flex-direction: column;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-5xl);
+  min-width: 468px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-37xl);
+  color: var(--color-mediumslateblue);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 1050px) {
+  .identificationId {
+    font-size: var(--font-size-26xl);
+    line-height: 11px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .column {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .identificationId {
+    font-size: var(--font-size-15xl);
+    line-height: 8px;
+  }
+  .toRequestAn {
+    font-size: var(--font-size-base);
+    line-height: 20px;
+  }
+}
